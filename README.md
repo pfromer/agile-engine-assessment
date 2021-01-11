@@ -1,1 +1,6 @@
-# agile-engine-assessment
+# Build Instructions:
+yarn
+
+# Run the site:
+yarn start
+
