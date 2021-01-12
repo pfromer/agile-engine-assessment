@@ -21,9 +21,14 @@ function App() {
   const [index, setIndex] = useState(0);
   const [isOpened, setOpened] = useState(false);
 
+  const onClickHandler = (index) => {
+    setIndex(index)
+    setOpened(true)
+  }
+
   return (
     <Context.Provider value={{ index, isOpened, setIndex, setOpened, imgData, imgDispatch }}>
-      <Grid />
+      <Grid onClick={onClickHandler} />
       <PhotoViewer />
     </Context.Provider>
   );

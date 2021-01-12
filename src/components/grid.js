@@ -6,7 +6,7 @@ import 'react-image-lightbox/style.css';
 import Context from '../context'
 import '../index.css';
 
-function Grid() {
+function Grid(props) {
 
     const pageReducer = (state, action) => {
         switch (action.type) {
@@ -17,7 +17,7 @@ function Grid() {
         }
     }
 
-    const { setIndex, setOpened, imgData, imgDispatch } = useContext(
+    const { setIndex, imgData, imgDispatch } = useContext(
         Context
     );
 
@@ -45,7 +45,7 @@ function Grid() {
                                 data-src={image.cropped_picture}
                                 className="card-img-top"
                                 src={''}
-                                onClick={() => { setIndex(index); setOpened(true); }}
+                                onClick={() => props.onClick(index)}
                             />
                         )
                     })}
