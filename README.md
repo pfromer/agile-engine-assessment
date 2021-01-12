@@ -1,6 +1,6 @@
-# Build Instructions:
+## Build:
 yarn
 
-# Run the site:
+## Run:
 yarn start
 
